@@ -1,300 +1,423 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Flame Pizzeria</title>
-<link rel="icon" type="image/x-icon" href="./images/favicon.png">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Permanent+Marker">
-<style>
-body, html {height: 100%}
-body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
-.title {font-family: "Permanent Marker", sans-serif}
-.menu {display: none}
-.bgimg {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("./images/pizza.jpg");
-  min-height: 90%;
-}
-</style>
+  <title>Flame Pizzeria</title>
+  <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Permanent+Marker">
+  <style>
+    body,
+    html {
+      height: 100%
+    }
+
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Amatic SC", sans-serif
+    }
+
+    .title {
+      font-family: "Permanent Marker", sans-serif
+    }
+
+    .menu {
+      display: none
+    }
+
+    .bgimg {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url("./images/pizza.jpg");
+      min-height: 90%;
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top w3-hide-small">
-  <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
-    <a href="#" class="w3-bar-item w3-button">HOME</a>
-    <a href="#menu" class="w3-bar-item w3-button">MENU</a>
-    <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-    <a href="#myMap" class="w3-bar-item w3-button">CONTACT</a>
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top w3-hide-small">
+    <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
+      <a href="#" class="w3-bar-item w3-button">HOME</a>
+      <a href="#menu" class="w3-bar-item w3-button">MENU</a>
+      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="#myMap" class="w3-bar-item w3-button">CONTACT</a>
+    </div>
   </div>
-</div>
-  
-<!-- Header with image -->
-<header class="bgimg w3-display-container" id="home">
-  <div class="w3-display-bottomleft w3-padding">
-    <span class="w3-tag w3-xxlarge">Open from 5pm to 9pm Tuesday - Sunday</span>
+
+  <!-- Header with image -->
+  <header class="bgimg w3-display-container" id="home">
+    <div class="w3-display-bottomleft w3-padding">
+      <span class="w3-tag w3-xxlarge">Open from 5pm to 9pm Tuesday - Sunday</span>
+    </div>
+    <div class="w3-display-middle w3-center w3-rest">
+      <span class="title w3-text-black" style="font-size: 10vw">Flame<br>Pizzeria</span>
+      <!--<span class="w3-text-white w3-hide-large w3-hide-medium" style="font-size:60px"><b>thin<br>CRUST PIZZA</b></span>-->
+      <p><a href="#menu" class="w3-button w3-xxlarge w3-black">Let me see the menu</a></p>
+    </div>
+  </header>
+
+  <!-- Menu Container -->
+  <div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
+    <div class="w3-content">
+
+      <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">THE MENU</h1>
+      <div class="w3-row w3-center w3-border w3-border-dark-grey">
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="myLink">
+          <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Pizza</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');">
+          <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Starter</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Dessert');">
+          <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Dessert</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Beer');" id="myLink">
+          <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Beer</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Wine');" id="myLink">
+          <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Wine</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Beverage');" id="myLink">
+          <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Beverage</div>
+        </a>
+      </div>
+
+      <div id="Pizza" class="w3-container menu w3-padding-32 w3-white">
+
+        <h1><b>The Margherita</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$15</span></h1>
+        <p class="w3-text-grey">Marinara sauce with locally-sourced mozzarella, topped with fresh basil</p>
+        <hr>
+
+        <h1><b>The Nadia</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$15</span></h1>
+        <p class="w3-text-grey">Spicy Arrabbiata sauce with shredded Parmesan cheese</p>
+        <hr>
+
+        <h1><b>The Lily</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$16</span></h1>
+        <p class="w3-text-grey">Fire-roasted red pepper and sundried tomato tapenade, topped with feta cheese, Kalamata
+          olives, finished with Greek cut oregano</p>
+        <hr>
+
+        <h1><b>The Lindsey</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$17</span></h1>
+        <p class="w3-text-grey">Seasoned three cheese blend composed of mozzarella, parmesan & asiago, blended with
+          fresh garlic, thyme, and oregano, Topped with baby arugula and balsamic glaze</p>
+        <hr>
+
+        <h1><b>The Nana</b>
+          <!--<span class="w3-tag w3-red w3-round">Hot!</span>--><span
+            class="w3-right w3-tag w3-dark-grey w3-round">$18</span>
+        </h1>
+        <p class="w3-text-grey">Fresh mozzarella, caramelized onions, thinly slice potatoes, topped with fresh dill &
+          truffle oil, finished with flaky sea salt</p>
+        <hr>
+
+        <h1><b>The Richie</b>
+          <!--<span class="w3-tag w3-grey w3-round">New</span>--><span
+            class="w3-right w3-tag w3-dark-grey w3-round">$19</span>
+        </h1>
+        <p class="w3-text-grey">Spicy Arrabbiata sauce with fresh mozzarella, Genoa salami and fennel sausage</p>
+        <hr>
+
+        <h1><b>Extra Toppings</b>
+          <!--<span class="w3-tag w3-grey w3-round">New</span>--><span
+            class="w3-right w3-tag w3-dark-grey w3-round">$2</span>
+        </h1>
+        <p class="w3-text-grey">Arrabbiata Sauce, Caramelized Onion, Cauliflower, Feta Cheese, Garlic, Marinara Sauce,
+          Mushrooms, Parmesan, Three Cheese</p>
+        <hr>
+
+        <h1><b>More Extra Toppings</b>
+          <!--<span class="w3-tag w3-grey w3-round">New</span>--><span
+            class="w3-right w3-tag w3-dark-grey w3-round">$3</span>
+        </h1>
+        <p class="w3-text-grey">Chicken, Fennel Sausage, Meatballs, Prosciutto, Salami, Truffle Oil</p>
+
+      </div>
+
+      <div id="Starter" class="w3-container menu w3-padding-32 w3-white">
+
+        <h1><b>Woodfired Wings</b>
+          <!--<span class="w3-tag w3-grey w3-round">Seasonal</span>--><span
+            class="w3-right w3-tag w3-dark-grey w3-round">Eighteen Piece $23</span><span
+            class="w3-right w3-tag w3-dark-grey w3-round">Twelve Piece $14</span><span
+            class="w3-right w3-tag w3-dark-grey w3-round">Six Piece $9</span>
+        </h1>
+        <p class="w3-text-grey">Six Piece comes with one choice of sauce/rub, Twelve Piece two choices of sauce/rub,
+          Eighteen Piece three choices of sauce/rub</p>
+        <p class="w3-text-grey">Sauces/Rubs: Bourbon BBQ, Buffalo Sauce**, Sweet Chili Garlic**, Citrus Chipotle BBQ*,
+          Cuban Cilantro, Garlic Parmesan Sauce, Hickory Smoked BBQ, Texas Honey BBQ, Jamaican Jerk Rub*, Lemon Pepper
+          Rub, Mango Habanero BBQ**, Old Bay Rub, Smoked Paprika Chipotle Rub*, Tapatio***
+        <p class="w3-text-grey">Note: *Mild heat **Medium Heat ***High Heat</p>
+        <hr>
+
+        <h1><b>Meatball Sliders</b>
+          <!--<span class="w3-tag w3-grey w3-round">Seasonal</span>--><span
+            class="w3-right w3-tag w3-dark-grey w3-round">$8</span>
+        </h1>
+        <p class="w3-text-grey">Three hand-rolled, wood-fired meatballs with a choice of Marinara or Arrabbiata sauce,
+          sprinkled with Parmesan cheese and served on Hawaiian buns</p>
+        <hr>
+
+        <h1><b>Thousand Layer Potatoes</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$8</span></h1>
+        <p class="w3-text-grey">Thin Sliced potatoes layered with asiago chese, cream, garlic, parsley, and thyme, baked
+          slowly in our wood-fired oven</p>
+        <hr>
+
+        <h1><b>Caesar Salad</b>
+          <!--<span class="w3-tag w3-grey w3-round">Popular</span>--> <span
+            class="w3-right w3-tag w3-dark-grey w3-round">$10</span>
+        </h1>
+        <p class="w3-text-grey">Romaine lettuce, tossed with homemade dressing and parmesan cheese, topped with our
+          freshly baked croutons</p>
+        <hr>
+
+        <h1><b>Arugula Salad</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$10</span></h1>
+        <p class="w3-text-grey">Locally-grown baby arugula, tossed with feta cheese and homemade balsamic dressing,
+          topped with cucumbers & crispy pancetta</p>
+        <hr>
+
+        <h1><b>Wood-Fired Antipasto</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$12</span></h1>
+        <p class="w3-text-grey">Fire-roasted peppers, cauliflower, mushrooms, caramelized onions, & prosciutto</p>
+        <hr>
+
+        <h1><b>Lemon Garlic Chicken</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$12</span></h1>
+        <p class="w3-text-grey">Wood-Fired, boneless chicken breast,braised in fresh lemon-garlic sauce</p>
+
+      </div>
+
+
+      <div id="Dessert" class="w3-container menu w3-padding-32 w3-white">
+
+        <h1><b>Rotating Dessert</b>
+          <!--<span class="w3-tag w3-grey w3-round">Popular</span>--> <span
+            class="w3-right w3-tag w3-dark-grey w3-round">Varies</span>
+        </h1>
+        <p class="w3-text-grey">Ask your server about our current dessert!</p>
+
+      </div>
+
+      <div id="Beer" class="w3-container menu w3-padding-32 w3-white">
+
+        <h1><b>Valley Girl</b>
+          <!--<span class="w3-tag w3-grey w3-round">Popular</span>--> <span
+            class="w3-right w3-tag w3-dark-grey w3-round">$8.50</span>
+        </h1>
+        <p class="w3-text-grey">Draft, 8 One 8, Blonde, 5.6% ABV</p>
+        <hr>
+
+        <h1><b>El Jefe</b>
+          <!--<span class="w3-tag w3-grey w3-round">Popular</span>--> <span
+            class="w3-right w3-tag w3-dark-grey w3-round">$8.50</span>
+        </h1>
+        <p class="w3-text-grey">Draft, 8 One 8, Wheat Ale, 4.6% ABV</p>
+        <hr>
+
+        <h1><b>Black Cat Moan</b>
+          <!--<span class="w3-tag w3-grey w3-round">Popular</span>--> <span
+            class="w3-right w3-tag w3-dark-grey w3-round">$8.50</span>
+        </h1>
+        <p class="w3-text-grey">Draft, 8 One 8, Porter, 11% ABV</p>
+        <hr>
+		
+		<h1><b>Tyrannicide</b>
+          <!--<span class="w3-tag w3-grey w3-round">Popular</span>--> <span
+            class="w3-right w3-tag w3-dark-grey w3-round">$8.50</span>
+        </h1>
+        <p class="w3-text-grey">Draft, 14 Cannons, IPA, 7.5% ABV</p>
+        <hr>
+
+        <h1><b>Changing Seas</b>
+          <!--<span class="w3-tag w3-grey w3-round">Popular</span>--> <span
+            class="w3-right w3-tag w3-dark-grey w3-round">$8.50</span>
+        </h1>
+        <p class="w3-text-grey">Draft, 14 Cannons, Rotating Seasonal Fruited Wheat Ale, 4.9% ABV<br>Ask your server
+          about the current flavor!</p>
+        <hr>
+
+        <h1><b>Viva Lucha Libre</b>
+          <!--<span class="w3-tag w3-grey w3-round">Popular</span>--> <span
+            class="w3-right w3-tag w3-dark-grey w3-round">$8.50</span>
+        </h1>
+        <p class="w3-text-grey">Draft, Paperback, Mexican Lager, 4.5% ABV</p>
+        <hr>
+
+        <h1><b>Dinosour</b>
+          <!--<span class="w3-tag w3-grey w3-round">Popular</span>--> <span
+            class="w3-right w3-tag w3-dark-grey w3-round">$8.50</span>
+        </h1>
+        <p class="w3-text-grey">Draft, Paperback, Sour Fruited, 5.3% ABV</p>
+        <hr>
+
+        <h1><b>They Drink Among Us</b>
+          <!--<span class="w3-tag w3-grey w3-round">Popular</span>--> <span
+            class="w3-right w3-tag w3-dark-grey w3-round">$8.50</span>
+        </h1>
+        <p class="w3-text-grey">Draft, Paperback, Double IPA, 9.0% ABV</p>
+        <hr>
+
+      </div>
+
+      <div id="Wine" class="w3-container menu w3-padding-32 w3-white">
+
+        <h1><b>Pinot Grigio</b>
+          <!--<span class="w3-tag w3-grey w3-round">Popular</span>--> <span
+            class="w3-right w3-tag w3-dark-grey w3-round">Bottle $27</span><span
+            class="w3-right w3-tag w3-dark-grey w3-round">Glass $8</span>
+        </h1>
+        <p class="w3-text-grey">Caposaldo, Italy</p>
+        <hr>
+
+        <h1><b>Chardonnay</b>
+          <!--<span class="w3-tag w3-grey w3-round">Popular</span>--> <span
+            class="w3-right w3-tag w3-dark-grey w3-round">Bottle $31</span><span
+            class="w3-right w3-tag w3-dark-grey w3-round">Glass $9</span>
+        </h1>
+        <p class="w3-text-grey">Bogle, California</p>
+        <hr>
+
+        <h1><b>Sparkling Wine</b>
+          <!--<span class="w3-tag w3-grey w3-round">Popular</span>--> <span
+            class="w3-right w3-tag w3-dark-grey w3-round">Half Bottle $10</span>
+        </h1>
+        <p class="w3-text-grey">Rotating, Ask your server</p>
+        <hr>
+
+        <h1><b>Chianti</b>
+          <!--<span class="w3-tag w3-grey w3-round">Popular</span>--> <span
+            class="w3-right w3-tag w3-dark-grey w3-round">Bottle $27</span><span
+            class="w3-right w3-tag w3-dark-grey w3-round">Glass $8</span>
+        </h1>
+        <p class="w3-text-grey">Banfi, Italy</p>
+        <hr>
+
+        <h1><b>Rose</b>
+          <!--<span class="w3-tag w3-grey w3-round">Popular</span>--> <span
+            class="w3-right w3-tag w3-dark-grey w3-round">Bottle $31</span><span
+            class="w3-right w3-tag w3-dark-grey w3-round">Glass $9</span>
+        </h1>
+        <p class="w3-text-grey">Angeline, California</p>
+        <hr>
+
+        <h1><b>Merlot</b>
+          <!--<span class="w3-tag w3-grey w3-round">Popular</span>--> <span
+            class="w3-right w3-tag w3-dark-grey w3-round">Bottle $31</span><span
+            class="w3-right w3-tag w3-dark-grey w3-round">Glass $9</span>
+        </h1>
+        <p class="w3-text-grey">Bread & Butter, California</p>
+        <hr>
+
+        <h1><b>Cabernet Sauvignon</b>
+          <!--<span class="w3-tag w3-grey w3-round">Popular</span>--> <span
+            class="w3-right w3-tag w3-dark-grey w3-round">Bottle $35</span><span
+            class="w3-right w3-tag w3-dark-grey w3-round">Glass $10</span>
+        </h1>
+        <p class="w3-text-grey">Substance, Washington</p>
+
+      </div>
+
+      <div id="Beverage" class="w3-container menu w3-padding-32 w3-white">
+
+        <h1><b>Iced Tea</b>
+          <!--<span class="w3-tag w3-grey w3-round">Popular</span>--> <span
+            class="w3-right w3-tag w3-dark-grey w3-round">$3</span>
+        </h1>
+        <p class="w3-text-grey">Homemade black iced tea</p>
+        <hr>
+
+        <h1><b>Lemonade</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$3</span></h1>
+        <p class="w3-text-grey">Homemade Lemonade</p>
+        <hr>
+
+        <h1><b>Bottled Water</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$3</span></h1>
+        <p class="w3-text-grey">Voss still bottled water</p>
+        <hr>
+
+        <h1><b>Sparkling Bottled Water</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$3</span></h1>
+        <p class="w3-text-grey">S.Pelegrino Sparkling bottled water</p>
+        <hr>
+
+        <h1><b>Espresso</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$3</span></h1>
+        <p class="w3-text-grey">Shot of house espresso</p>
+        <hr>
+
+        <h1><b>Soda</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$3</span></h1>
+        <p class="w3-text-grey">Coca-Cola, Diet Coca-cola, Sprite, Dr. Pepper, Orange Crush</p>
+
+      </div>
+    </div>
+
   </div>
-  <div class="w3-display-middle w3-center w3-rest">
-    <span class="title w3-text-black" style="font-size: 10vw">Flame<br>Pizzeria</span>
-    <!--<span class="w3-text-white w3-hide-large w3-hide-medium" style="font-size:60px"><b>thin<br>CRUST PIZZA</b></span>-->
-    <p><a href="#menu" class="w3-button w3-xxlarge w3-black">Let me see the menu</a></p>
   </div>
-</header>
 
-<!-- Menu Container -->
-<div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
-  <div class="w3-content">
-  
-    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">THE MENU</h1>
-    <div class="w3-row w3-center w3-border w3-border-dark-grey">
-      <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="myLink">
-        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Pizza</div>
-      </a>
-      <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');">
-        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Starter</div>
-      </a>
-            <a href="javascript:void(0)" onclick="openMenu(event, 'Dessert');">
-        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Dessert</div>
-      </a>
-      <a href="javascript:void(0)" onclick="openMenu(event, 'Beer');" id="myLink">
-        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Beer</div>
-      </a>
-      <a href="javascript:void(0)" onclick="openMenu(event, 'Wine');" id="myLink">
-        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Wine</div>
-      </a>
-      <a href="javascript:void(0)" onclick="openMenu(event, 'Beverage');" id="myLink">
-        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Beverage</div>
-      </a>
-    </div>
-
-    <div id="Pizza" class="w3-container menu w3-padding-32 w3-white">
-	
-      <h1><b>The Margherita</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$15</span></h1>
-      <p class="w3-text-grey">Marinara sauce with locally-sourced mozzarella, topped with fresh basil</p>
-      <hr>
-   
-      <h1><b>The Nadia</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$15</span></h1>
-      <p class="w3-text-grey">Spicy Arrabbiata sauce with shredded Parmesan cheese</p>
-      <hr>
-      
-      <h1><b>The Lily</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$16</span></h1>
-      <p class="w3-text-grey">Fire-roasted red pepper and sundried tomato tapenade, topped with feta cheese, Kalamata olives, finished with Greek cut oregano</p>
-      <hr>
-
-      <h1><b>The Lindsey</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$17</span></h1>
-      <p class="w3-text-grey">Seasoned three cheese blend composed of mozzarella, parmesan & asiago, blended with fresh garlic, thyme, and oregano, Topped with baby arugula and balsamic glaze</p>
-      <hr>
-
-      <h1><b>The Nana</b> <!--<span class="w3-tag w3-red w3-round">Hot!</span>--><span class="w3-right w3-tag w3-dark-grey w3-round">$18</span></h1>
-      <p class="w3-text-grey">Fresh mozzarella, caramelized onions, thinly slice potatoes, topped with fresh dill & truffle oil, finished with flaky sea salt</p>
-      <hr>
-
-      <h1><b>The Richie</b> <!--<span class="w3-tag w3-grey w3-round">New</span>--><span class="w3-right w3-tag w3-dark-grey w3-round">$19</span></h1>
-      <p class="w3-text-grey">Spicy Arrabbiata sauce with fresh mozzarella, Genoa salami and fennel sausage</p>
-	  <hr>
-
-      <h1><b>Extra Toppings</b> <!--<span class="w3-tag w3-grey w3-round">New</span>--><span class="w3-right w3-tag w3-dark-grey w3-round">$2</span></h1>
-      <p class="w3-text-grey">Arrabbiata Sauce, Caramelized Onion, Cauliflower, Feta Cheese, Garlic, Marinara Sauce, Mushrooms, Parmesan, Three Cheese</p>
-	  <hr>
-
-      <h1><b>More Extra Toppings</b> <!--<span class="w3-tag w3-grey w3-round">New</span>--><span class="w3-right w3-tag w3-dark-grey w3-round">$3</span></h1>
-      <p class="w3-text-grey">Chicken, Fennel Sausage, Meatballs, Prosciutto, Salami, Truffle Oil</p>
-
-    </div>
-
-    <div id="Starter" class="w3-container menu w3-padding-32 w3-white">
-
-      <h1><b>Woodfired Wings</b> <!--<span class="w3-tag w3-grey w3-round">Seasonal</span>--><span class="w3-right w3-tag w3-dark-grey w3-round">Eighteen Piece $23</span><span class="w3-right w3-tag w3-dark-grey w3-round">Twelve Piece $14</span><span class="w3-right w3-tag w3-dark-grey w3-round">Six Piece $9</span></h1>
-      <p class="w3-text-grey">Six Piece comes with one choice of sauce/rub, Twelve Piece two choices of sauce/rub, Eighteen Piece three choices of sauce/rub</p>
-      <p class="w3-text-grey">Sauces/Rubs: Bourbon BBQ, Buffalo Sauce**, Chili Garlic Sauce***, Citrus Chipotle BBQ*, Cuban Cilantro, Garlic Parmesan Sauce, Hickory Smoked BBQ, Texas Honey BBQ, Jamaican Jerk Rub*, Lemon Pepper Rub, Mango Habanero BBQ**, Old Bay Rub, Smoked Paprika Chipotle Rub*
-      <p class="w3-text-grey">Note: *Mild heat **Medium Heat ***High Heat</p>
-      <hr>
-
-      <h1><b>Meatball Sliders</b> <!--<span class="w3-tag w3-grey w3-round">Seasonal</span>--><span class="w3-right w3-tag w3-dark-grey w3-round">$8</span></h1>
-      <p class="w3-text-grey">Three hand-rolled, wood-fired meatballs with a choice of Marinara or Arrabbiata sauce, sprinkled with Parmesan cheese and served on Hawaiian buns</p>
-      <hr>
-   
-      <h1><b>Thousand Layer Potatoes</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$8</span></h1>
-      <p class="w3-text-grey">Thin Sliced potatoes layered with asiago chese, cream, garlic, parsley, and thyme, baked slowly in our wood-fired oven</p>
-      <hr>
-
-      <h1><b>Caesar Salad</b> <!--<span class="w3-tag w3-grey w3-round">Popular</span>--> <span class="w3-right w3-tag w3-dark-grey w3-round">$10</span></h1>
-      <p class="w3-text-grey">Romaine lettuce, tossed with homemade dressing and parmesan cheese, topped with our freshly baked croutons</p>
-      <hr>
-
-      <h1><b>Arugula Salad</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$10</span></h1>
-      <p class="w3-text-grey">Locally-grown baby arugula, tossed with feta cheese and homemade balsamic dressing, topped with cucumbers & crispy pancetta</p>
-      <hr>
-      
-      <h1><b>Wood-Fired Antipasto</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$12</span></h1>
-      <p class="w3-text-grey">Fire-roasted peppers, cauliflower, mushrooms, caramelized onions, & prosciutto</p>
-      <hr>
-      
-      <h1><b>Lemon Garlic Chicken</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$12</span></h1>
-      <p class="w3-text-grey">Wood-Fired, boneless chicken breast,braised in fresh lemon-garlic sauce</p>
-	  
-    </div>
-
-
-    <div id="Dessert" class="w3-container menu w3-padding-32 w3-white">
-	
-      <h1><b>Rotating Dessert</b> <!--<span class="w3-tag w3-grey w3-round">Popular</span>--> <span class="w3-right w3-tag w3-dark-grey w3-round">Varies</span></h1>
-      <p class="w3-text-grey">Ask your server about our current dessert!</p>
-
-    </div>
-
-    <div id="Beer" class="w3-container menu w3-padding-32 w3-white">
-
-      <h1><b>Valley Girl</b> <!--<span class="w3-tag w3-grey w3-round">Popular</span>--> <span class="w3-right w3-tag w3-dark-grey w3-round">$8.50</span></h1>
-      <p class="w3-text-grey">Draft, 8 One 8, Blonde, 5.6% ABV</p>
-      <hr>
-
-      <h1><b>El Jefe</b> <!--<span class="w3-tag w3-grey w3-round">Popular</span>--> <span class="w3-right w3-tag w3-dark-grey w3-round">$8.50</span></h1>
-      <p class="w3-text-grey">Draft, 8 One 8, Wheat Ale, 4.6% ABV</p>
-      <hr>
-
-      <h1><b>Marooner Marzen</b> <!--<span class="w3-tag w3-grey w3-round">Popular</span>--> <span class="w3-right w3-tag w3-dark-grey w3-round">$8.50</span></h1>
-      <p class="w3-text-grey">Draft, 14 Cannons, Amber Lager, 5.3% ABV</p>
-      <hr>
-
-      <h1><b>Tyrannicide</b> <!--<span class="w3-tag w3-grey w3-round">Popular</span>--> <span class="w3-right w3-tag w3-dark-grey w3-round">$8.50</span></h1>
-      <p class="w3-text-grey">Draft, 14 Cannons, IPA, 7.5% ABV</p>
-      <hr>
-
-      <h1><b>Changing Seas</b> <!--<span class="w3-tag w3-grey w3-round">Popular</span>--> <span class="w3-right w3-tag w3-dark-grey w3-round">$8.50</span></h1>
-      <p class="w3-text-grey">Draft, 14 Cannons, Rotating Seasonal Fruited Wheat Ale, 4.9% ABV<br>Ask your server about the current flavor!</p>
-      <hr>
-
-      <h1><b>Arctic Annihilation</b> <!--<span class="w3-tag w3-grey w3-round">Popular</span>--> <span class="w3-right w3-tag w3-dark-grey w3-round">$8.50</span></h1>
-      <p class="w3-text-grey">Draft, Paperback, Pale Ale, 9.5% ABV</p>
-      <hr>
-
-      <h1><b>Czechs Who Wear Leather</b> <!--<span class="w3-tag w3-grey w3-round">Popular</span>--> <span class="w3-right w3-tag w3-dark-grey w3-round">$8.50</span></h1>
-      <p class="w3-text-grey">Draft, Paperback, Czech Pilsner, 4.9% ABV</p>
-      <hr>
-
-      <h1><b>Nude Peach</b> <!--<span class="w3-tag w3-grey w3-round">Popular</span>--> <span class="w3-right w3-tag w3-dark-grey w3-round">$8.50</span></h1>
-      <p class="w3-text-grey">Draft, Paperback, Milkshake IPA, 6.5% ABV</p>
-      <hr>
-
-      <h1><b>Canned Beer</b> <!--<span class="w3-tag w3-grey w3-round">Popular</span>--> <span class="w3-right w3-tag w3-dark-grey w3-round">Price Varies</span></h1>
-      <p class="w3-text-grey">Ask your server about our weekly rotating selection of canned craft beers!</p>
-
-    </div>
-
-    <div id="Wine" class="w3-container menu w3-padding-32 w3-white">
-
-      <h1><b>Pinot Grigio</b> <!--<span class="w3-tag w3-grey w3-round">Popular</span>--> <span class="w3-right w3-tag w3-dark-grey w3-round">Bottle $27</span><span class="w3-right w3-tag w3-dark-grey w3-round">Glass $8</span></h1>
-      <p class="w3-text-grey">Caposaldo, Italy</p>
-      <hr>
-
-      <h1><b>Chardonnay</b> <!--<span class="w3-tag w3-grey w3-round">Popular</span>--> <span class="w3-right w3-tag w3-dark-grey w3-round">Bottle $31</span><span class="w3-right w3-tag w3-dark-grey w3-round">Glass $9</span></h1>
-      <p class="w3-text-grey">Bogle, California</p>
-      <hr>
-
-      <h1><b>Sparkling Wine</b> <!--<span class="w3-tag w3-grey w3-round">Popular</span>--> <span class="w3-right w3-tag w3-dark-grey w3-round">Half Bottle $10</span></h1>
-      <p class="w3-text-grey">Rotating, Ask your server</p>
-      <hr>
-
-      <h1><b>Chianti</b> <!--<span class="w3-tag w3-grey w3-round">Popular</span>--> <span class="w3-right w3-tag w3-dark-grey w3-round">Bottle $27</span><span class="w3-right w3-tag w3-dark-grey w3-round">Glass $8</span></h1>
-      <p class="w3-text-grey">Caposaldo, Italy</p>
-      <hr>
-
-      <h1><b>Rose</b> <!--<span class="w3-tag w3-grey w3-round">Popular</span>--> <span class="w3-right w3-tag w3-dark-grey w3-round">Bottle $31</span><span class="w3-right w3-tag w3-dark-grey w3-round">Glass $9</span></h1>
-      <p class="w3-text-grey">Angeline, California</p>
-      <hr>
-
-      <h1><b>Merlot</b> <!--<span class="w3-tag w3-grey w3-round">Popular</span>--> <span class="w3-right w3-tag w3-dark-grey w3-round">Bottle $31</span><span class="w3-right w3-tag w3-dark-grey w3-round">Glass $9</span></h1>
-      <p class="w3-text-grey">Bread & Butter, California</p>
-      <hr>
-
-      <h1><b>Cabernet Sauvignon</b> <!--<span class="w3-tag w3-grey w3-round">Popular</span>--> <span class="w3-right w3-tag w3-dark-grey w3-round">Bottle $35</span><span class="w3-right w3-tag w3-dark-grey w3-round">Glass $10</span></h1>
-      <p class="w3-text-grey">Substance, Washington</p>
-
-    </div>
-
-    <div id="Beverage" class="w3-container menu w3-padding-32 w3-white">
-
-      <h1><b>Iced Tea</b> <!--<span class="w3-tag w3-grey w3-round">Popular</span>--> <span class="w3-right w3-tag w3-dark-grey w3-round">$3</span></h1>
-      <p class="w3-text-grey">Homemade black iced tea</p>
-      <hr>
-
-      <h1><b>Lemonade</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$3</span></h1>
-      <p class="w3-text-grey">Homemade Lemonade</p>
-      <hr>
-
-      <h1><b>Bottled Water</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$3</span></h1>
-      <p class="w3-text-grey">Voss still bottled water</p>
-      <hr>
-
-      <h1><b>Sparkling Bottled Water</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$3</span></h1>
-      <p class="w3-text-grey">S.Pelegrino Sparkling bottled water</p>
-      <hr>
-
-      <h1><b>Espresso</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$3</span></h1>
-      <p class="w3-text-grey">Shot of house espresso</p>
-      <hr>
-
-      <h1><b>Soda</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$3</span></h1>
-      <p class="w3-text-grey">Coca-Cola, Diet Coca-cola, Sprite, Dr. Pepper, Orange Crush</p>
-
-    </div>
-    </div>
-
-  </div>
-</div>
-
-<!-- About Container -->
-<div class="w3-container w3-padding-64 w3-red w3-grayscale w3-xlarge" id="about">
-  <div class="w3-content">
-    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">About</h1>
-    <p>Flame Pizzeria, a small restaurant with year-round twinkling lights and a 700-degree pizza oven that serves as the only heat source in the restaurant. The oven is used to make meatball sliders, puffy table bread, grilled lemon garlic chicken breast, thousand-layer potatoes, and of course, pizza. Neapolitan-style pies, paper-thin middle gives way to a thick outer crust with a nice char, chew and plenty of crisp bubbles.A curated toppings selection of caramelized red onions, oven-roasted mushrooms and red peppers, fennel sausage, fresh garlic, soppressata, olives, and more.</p>
-	<!--
+  <!-- About Container -->
+  <div class="w3-container w3-padding-64 w3-red w3-grayscale w3-xlarge" id="about">
+    <div class="w3-content">
+      <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">About</h1>
+      <p>Flame Pizzeria, a small restaurant with year-round twinkling lights and a 700-degree pizza oven that serves as
+        the only heat source in the restaurant. The oven is used to make meatball sliders, puffy table bread, grilled
+        lemon garlic chicken breast, thousand-layer potatoes, and of course, pizza. Neapolitan-style pies, paper-thin
+        middle gives way to a thick outer crust with a nice char, chew and plenty of crisp bubbles.A curated toppings
+        selection of caramelized red onions, oven-roasted mushrooms and red peppers, fennel sausage, fresh garlic,
+        soppressata, olives, and more.</p>
+      <!--
     <p><strong>The Chef?</strong> Mr. Italiano himself<img src="./images/table.jpg" style="width:150px" class="w3-circle w3-right" alt="Chef"></p>
     <p>We are proud of our interiors.</p>
     <img src="./images/table.jpg" style="width:100%" class="w3-margin-top w3-margin-bottom" alt="Restaurant">
 	-->
-    <h1 class ="w3-center"><b>Delivery Partners</b></h1>
-    <!--"w3-row">-->
-    <div class="w3-center">
-	<!--"w3-col s6"-->
+      <h1 class="w3-center"><b>Delivery Partners</b></h1>
+      <!--"w3-row">-->
       <div class="w3-center">
-        <p class ="w3-text-aqua w3-mobile"><a href="https://slicelife.com/restaurants/ca/reseda/91335/flame-pizzeria-62c147b3-94df-43c6-8416-8a55331c756e/menu">Slice</a></p>
-       <p class ="w3-text-aqua w3-mobile"><a href="https://postmates.com/store/flame-pizzeria-vanowen-st/LR2rKa1qTXaQNeAC7NkU_g">Postmates/Ubereats</a></p>
-       <p class ="w3-text-aqua w3-mobile"><a href="https://www.doordash.com/store/flame-pizzeria-los-angeles-2378258/?event_type=autocomplete&pickup=false">Doordash</a></p>
-      </div>
-	  <br>
+        <!--"w3-col s6"-->
+        <div class="w3-center">
+          <p class="w3-text-aqua w3-mobile"><a
+              href="https://slicelife.com/restaurants/ca/reseda/91335/flame-pizzeria-62c147b3-94df-43c6-8416-8a55331c756e/menu">Slice</a>
+          </p>
+          <p class="w3-text-aqua w3-mobile"><a
+              href="https://postmates.com/store/flame-pizzeria-vanowen-st/LR2rKa1qTXaQNeAC7NkU_g">Postmates/Ubereats</a>
+          </p>
+          <p class="w3-text-aqua w3-mobile"><a
+              href="https://www.doordash.com/store/flame-pizzeria-los-angeles-2378258/?event_type=autocomplete&pickup=false">Doordash</a>
+          </p>
+        </div>
+        <br>
 
-     <!-- <div class="w3-col s6">
+        <!-- <div class="w3-col s6">
         <p>Friday 10:00 - 12:00</p>
         <p>Saturday 10:00 - 23:00</p>
         <p>Sunday Closed</p>
       </div>-->
+      </div>
+
+      <h1 class="w3-center"><b>For Reservations</b></h1>
+      <p class="w3-center w3-text-aqua w3-mobile"><a
+          href="https://www.opentable.co.th/r/flame-pizzeria-reseda">OpenTable</a></p>
+
     </div>
 
-    <h1 class ="w3-center"><b>For Reservations</b></h1>
-    <p class ="w3-center w3-text-aqua w3-mobile"><a href="https://www.opentable.co.th/r/flame-pizzeria-reseda">OpenTable</a></p>
-
+    <h1 class="w3-center"><b>Due to the size of our establishment, parties of 10 or larger will be charged a service
+        charge of $25 per person</b></h1>
   </div>
 
-  <h1 class ="w3-center"><b>Due to the size of our establishment, parties of 10 or larger will be charged a service charge of $25 per person</b></h1>
-</div>
+  <!-- Image of location/map -->
+  <img src="./images/overview.jpg" class="w3-image" style="width:100%;">
 
-<!-- Image of location/map -->
-<img src="./images/overview.jpg" class="w3-image" style="width:100%;">
-
-<!-- Contact -->
-<div class="w3-container w3-padding-64 w3-blue-grey w3-grayscale-min w3-xxlarge" id="myMap">
-  <div class="w3-content w3-center">
-    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Contact</h1>
-	<p class="w3-xxlarge">Flame Pizzeria</p>
-    <p class="w3-xxlarge">19309 Vanowen Street Reseda, CA 91335</p>
-	<p class="w3-xxlarge"> Tel: 818.578.3888<br>Email: flamepizza2@gmail.com</p>
-    <!--
+  <!-- Contact -->
+  <div class="w3-container w3-padding-64 w3-blue-grey w3-grayscale-min w3-xxlarge" id="myMap">
+    <div class="w3-content w3-center">
+      <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Contact</h1>
+      <p class="w3-xxlarge">Flame Pizzeria</p>
+      <p class="w3-xxlarge">19309 Vanowen Street Reseda, CA 91335</p>
+      <p class="w3-xxlarge"> Tel: 818.578.3888<br>Email: flamepizza2@gmail.com</p>
+      <!--
 	<p><span class="w3-tag">FYI!</span> We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p>
     <p class="w3-xxlarge"><strong>Reserve</strong> a table, ask for today's special or just send us a message:</p>
     <form action="/action_page.php" target="_blank">
@@ -307,28 +430,29 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
   </div>
 </div>
 -->
-<!-- Footer 
+      <!-- Footer 
 <footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
 -->
-<script>
-// Tabbed Menu
-function openMenu(evt, menuName) {
-  var i, x, tablinks;
-  x = document.getElementsByClassName("menu");
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < x.length; i++) {
-     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
-  }
-  document.getElementById(menuName).style.display = "block";
-  evt.currentTarget.firstElementChild.className += " w3-red";
-}
-document.getElementById("myLink").click();
-</script>
+      <script>
+        // Tabbed Menu
+        function openMenu(evt, menuName) {
+          var i, x, tablinks;
+          x = document.getElementsByClassName("menu");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablink");
+          for (i = 0; i < x.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+          }
+          document.getElementById(menuName).style.display = "block";
+          evt.currentTarget.firstElementChild.className += " w3-red";
+        }
+        document.getElementById("myLink").click();
+      </script>
 
 </body>
+
 </html>
